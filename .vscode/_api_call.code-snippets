@@ -1,0 +1,26 @@
+{
+  "fooo": {
+    "prefix": "api:request",
+    "body": [
+      "/**",
+      " * Request",
+      " */",
+      "const rs = await this.\\$axios.post('__api_endpoint__', arg)",
+      "/**",
+      " * Respoms handling",
+      " */",
+      "if (rs.data.errorFlg) {",
+      "  const errors = this.\\$apiError(rs.data)",
+      "  if (errors) {",
+      "    this.apiErrors = this.apiErrors.concat(errors)",
+      "  }",
+      "} else {",
+      "  const warns = this.\\$apiWarn(rs.data)",
+      "  if (warns) {",
+      "    this.apiWarns = this.apiWarns.concat(warns)",
+      "  }",
+      "}"
+    ],
+    "description": "<style lang=\"scss\">"
+  }
+}

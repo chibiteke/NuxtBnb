@@ -1,0 +1,36 @@
+{
+  "script": {
+    "scope": "vue",
+    "prefix": "script:type",
+    "body": [
+      "<script lang=\"ts\">",
+      "import { Component, Vue } from 'nuxt-property-decorator'",
+      "@Component({",
+      "  name: '_____',",
+      "  layout: 'default'",
+      "})",
+      "export default class Top extends Vue {",
+      "\t${0}",
+      "})",
+      "</script>"
+    ],
+    "description": "<script>"
+  },
+  "template": {
+    "scope": "vue",
+    "prefix": "template",
+    "body": ["<template>", "\t${0}", "</template>"],
+    "description": "<template>"
+  },
+  "style": {
+    "scope": "vue",
+    "prefix": "style:scss",
+    "body": ["<style lang=\"scss\" scoped>", "${0}", "</style>"],
+    "description": "<style lang=\"scss\">"
+  },
+  "foood": {
+    "prefix": "foood",
+    "body": ["<style lang=\"scss\" scoped>", "${0}", "</style>"],
+    "description": "<style lang=\"scss\">"
+  }
+}
