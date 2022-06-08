@@ -17,4 +17,7 @@ export default {
   router: {
     prefetchLinks: false,
   },
+  publicRuntimeConfig: {
+    googleApiKey: process.env.GOOGLE_API_KEY,
+  },
 }
