@@ -1,18 +1,33 @@
 <template>
+
   <div>
+
     <div style="display:flex;">
+
       <img v-for="image in home.images" :key="image" :src="image" width="200" height="150" />
+
     </div>
-    {{ home.title }}<br />
-    ${{ home.pricePerNight }} / night<br />
-    <img src="/images/marker.svg" width="20" height="20" />{{ home.location.address }} {{ home.location.city }} {{ home.location.state }}
-    {{ home.location.country }}<br />
-    <img src="/images/star.svg" width="20" height="20" />{{ home.reviewValue }} <br />
-    {{ home.guests }} guests, {{ home.bedrooms }} rooms, {{ home.beds }} beds, {{ home.bathrooms }} bath<br />
-    {{ home.description }}
+     {{ home.title }}
+    <br />
+     ${{ home.pricePerNight }} / night
+    <br />
+
+    <img src="/images/marker.svg" width="20" height="20" />
+     {{ home.location.address }} {{ home.location.city }} {{ home.location.state }} {{ home.location.country }}
+    <br />
+
+    <img src="/images/star.svg" width="20" height="20" />
+     {{ home.reviewValue }}
+    <br />
+     {{ home.guests }} guests, {{ home.bedrooms }} rooms, {{ home.beds }} beds, {{ home.bathrooms }} bath
+    <br />
+     {{ home.description }}
     <div style="height:800px;width:800px" ref="map"></div>
+
   </div>
+
 </template>
+
 <script>
 import homes from "~/data/homes";
 
@@ -22,7 +37,7 @@ export default {
       title: this.home.title,
       script: [
         {
-          src: `https://maps.googleapis.com/maps/api/js?key=AIzaSyDSTS7A56ZwUQBJcpgGf2FBRJocnkTR-6g&libraries=places&callback=initMap`,
+          src: `https://maps.googleapis.com/maps/api/js?key=${this.$config.googleApiKey}&libraries=places&callback=initMap`,
           hid: "map",
           async: true,
           skip: process.client && window.mapLoaded,
@@ -69,3 +84,4 @@ export default {
   },
 };
 </script>
+
