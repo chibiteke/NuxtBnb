@@ -1,9 +1,10 @@
 {
-  "name":"mastering-nuxt",
+  "name": "mastering-nuxt",
   "dependencies": {
-    "nuxt": "^2.15.8"
+    "nuxt": "^2.15.8",
+    "yarn": "^1.22.19"
   },
-  "scripts":{
+  "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start"
